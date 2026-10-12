@@ -5,21 +5,21 @@
 class Reglint < Formula
   desc "Configurable regex scanner with SARIF output and CI-friendly exit codes."
   homepage "https://github.com/reglint/reglint"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/reglint/reglint/releases/download/v1.0.0/reglint_1.0.0_darwin_amd64.tar.gz"
-      sha256 "9a654d586b16854c6deb927d89bd7414ed36dba11a555eed237d0db51afd2474"
+      url "https://github.com/reglint/reglint/releases/download/v1.1.0/reglint_1.1.0_darwin_amd64.tar.gz"
+      sha256 "b75ff01b2965dc60be6549145491cc3c1df40afeda2ce6d569e5a23ad0e3f607"
 
       define_method(:install) do
         bin.install "reglint"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/reglint/reglint/releases/download/v1.0.0/reglint_1.0.0_darwin_arm64.tar.gz"
-      sha256 "7b7d9c1be0ad8359c15636939ceccda9bef29a061bd461f8db3dfa62ea849dca"
+      url "https://github.com/reglint/reglint/releases/download/v1.1.0/reglint_1.1.0_darwin_arm64.tar.gz"
+      sha256 "d6da22d4df2a388771b8a0ce544a30d1998c7d682b3d4bea53540aef3f956704"
 
       define_method(:install) do
         bin.install "reglint"
@@ -29,15 +29,15 @@ class Reglint < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reglint/reglint/releases/download/v1.0.0/reglint_1.0.0_linux_amd64.tar.gz"
-      sha256 "dcf7efd6fd1a925725e750dc7d3edbb6e5e1cd8bf877c67dc2acd5267a58d41a"
+      url "https://github.com/reglint/reglint/releases/download/v1.1.0/reglint_1.1.0_linux_amd64.tar.gz"
+      sha256 "4b1d16c72621e3004ff31b8fbb2c39ffdb3b68b81955eac77c6fd14a039a834c"
       define_method(:install) do
         bin.install "reglint"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reglint/reglint/releases/download/v1.0.0/reglint_1.0.0_linux_arm64.tar.gz"
-      sha256 "d8a0ea330b48a2d4d0eae9906dfe7e3b10be25c6759ad0d5f45125295f14f145"
+      url "https://github.com/reglint/reglint/releases/download/v1.1.0/reglint_1.1.0_linux_arm64.tar.gz"
+      sha256 "3e401beb7271620a24f25a265db18a02b53bf10379ce35428685dd012dabdb48"
       define_method(:install) do
         bin.install "reglint"
       end
